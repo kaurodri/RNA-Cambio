@@ -13,3 +13,10 @@ plt.rcParams['figure.figsize'] = (10, 8)
 #Célula 3
 def get_linear_curve(x, w, b=0, ruido=0):
     return w * x + b + ruido * np.random.randn(x.shape[0])
+
+#Célula 4 - Dataset
+x = np.arange(1, 101, 3)
+Y = get_linear_curve(x, 0.18, 0, ruido=0.2)
+#x.shape
+#Y.shape
+#O ruído introduz variações pequenas e aleatórias, tornando os dados mais parecidos com os de um dataset real.
