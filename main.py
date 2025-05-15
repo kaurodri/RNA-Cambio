@@ -20,3 +20,10 @@ Y = get_linear_curve(x, 0.18, 0, ruido=0.2)
 #x.shape
 #Y.shape
 #O ruído introduz variações pequenas e aleatórias, tornando os dados mais parecidos com os de um dataset real.
+
+#Célula 5
+plt.scatter(x, Y)
+plt.xlabel('BRL (Reais)', fontsize=20)
+plt.ylabel('USD (Dólares)', fontsize=20)
+plt.title('Conversão BRL → USD (Taxa ~0.20)')
+plt.show()
