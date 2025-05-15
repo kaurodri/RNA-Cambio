@@ -27,3 +27,7 @@ plt.xlabel('BRL (Reais)', fontsize=20)
 plt.ylabel('USD (Dólares)', fontsize=20)
 plt.title('Conversão BRL → USD (Taxa ~0.20)')
 plt.show()
+
+#Célula 6
+w = np.random.rand(1)
+b = 0
