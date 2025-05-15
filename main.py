@@ -9,3 +9,7 @@ import matplotlib.pyplot as plt
 #Célula 2
 plt.style.use('dark_background')
 plt.rcParams['figure.figsize'] = (10, 8)
+
+#Célula 3
+def get_linear_curve(x, w, b=0, ruido=0):
+    return w * x + b + ruido * np.random.randn(x.shape[0])
