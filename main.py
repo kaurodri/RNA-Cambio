@@ -31,3 +31,7 @@ plt.show()
 #Célula 6
 w = np.random.rand(1)
 b = 0
+
+#Célula 7 - Forward pass (predição)
+def forward(inputs, w, b):
+    return w * inputs + b
