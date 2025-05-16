@@ -35,3 +35,7 @@ b = 0
 #Célula 7 - Forward pass (predição)
 def forward(inputs, w, b):
     return w * inputs + b
+
+#Célula 8 - Função de perda (MSE)
+def mse(Y, y):
+    return (Y - y) ** 2
