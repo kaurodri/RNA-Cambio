@@ -80,3 +80,8 @@ plt.xlabel('BRL (Reais)', fontsize=20)
 plt.ylabel('USD (Dólares)', fontsize=20)
 plt.legend(fontsize=14)
 plt.show()
+
+#Célula 15 - Teste conversão específica (50 BRL → ? USD)
+brl_test = np.array([50])
+usd_pred = forward(brl_test, w, b)
+print(f'\nPrevisão: {brl_test[0]} BRL = {usd_pred[0]:.2f} USD')
