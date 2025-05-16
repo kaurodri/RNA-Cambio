@@ -39,3 +39,12 @@ def forward(inputs, w, b):
 #Célula 8 - Função de perda (MSE)
 def mse(Y, y):
     return (Y - y) ** 2
+
+#Célula 9 - Backpropagation
+def backpropagation(inputs, outputs, targets, w, b, lr):
+    wdx = lr * (-2 * inputs * (targets - outputs)).mean()
+    bdx = lr * (-2 * (targets - outputs)).mean()
+ 
+    w -= wdx
+    b -= bdx
+    return w, b
