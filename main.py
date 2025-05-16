@@ -67,3 +67,8 @@ Y = get_linear_curve(x, 0.18, 0, ruido=0.2)
 #Célula 12 - Inicializar pesos aleatórios
 w = np.random.rand(1)
 b = np.zeros(1)
+
+#Célula 13 - Treinar o modelo
+w, b = model_fit(x, Y, w, b, epochs=50, lr=0.001)
+print(f'w (Taxa de câmbio aprendida): {w[0]:.5f}')
+print(f'b (Viés aprendido): {b[0]:.5f}')
