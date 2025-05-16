@@ -72,3 +72,11 @@ b = np.zeros(1)
 w, b = model_fit(x, Y, w, b, epochs=50, lr=0.001)
 print(f'w (Taxa de câmbio aprendida): {w[0]:.5f}')
 print(f'b (Viés aprendido): {b[0]:.5f}')
+
+#Célula 14 - Plotar resultados
+plt.scatter(x, Y, label='Dados reais (BRL → USD)')
+plt.plot(x, forward(x, w, b), 'r', lw=3, label='Predição do modelo')
+plt.xlabel('BRL (Reais)', fontsize=20)
+plt.ylabel('USD (Dólares)', fontsize=20)
+plt.legend(fontsize=14)
+plt.show()
