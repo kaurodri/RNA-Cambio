@@ -48,3 +48,14 @@ def backpropagation(inputs, outputs, targets, w, b, lr):
     w -= wdx
     b -= bdx
     return w, b
+
+#Célula 10 - Treinamento do modelo
+def model_fit(inputs, target, w, b, epochs=200, lr=0.001):
+    for epoch in range(epochs):
+        outputs = forward(inputs, w, b)
+        loss = np.mean(mse(target, outputs))
+        w, b = backpropagation(inputs, outputs, target, w, b, lr)
+
+        if (epoch + 1) % (epochs / 10) == 0:
+            print(f'Epoch: [{(epoch+1)}/{epochs}] Loss: [{loss:.6f}]')
+    return w, b
